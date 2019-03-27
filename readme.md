@@ -3,6 +3,7 @@
 ## Usage
 
 1 - Log in on a node with a DTR replica
+
 2 - Get the replica id:
 ```
 REPLICA_ID=$(docker ps -lf name='^/dtr-rethinkdb-.{12}$' --format '{{.Names}}' | cut -d- -f3)
