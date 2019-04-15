@@ -79,10 +79,6 @@ func init() {
 	cobra.OnInitialize(initConfig)
 	viper.BindEnv("dtr_replica_id")
 
-	// Cobra also supports local flags, which will only run
-	// when this action is called directly.
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-
 	if viper.IsSet("dtr_replica_id") {
 		rootCmd.Flags().StringVar(&replicaID, "replica-id", viper.Get("dtr_replica_id").(string), "Replica-id to connect")
 	} else {
