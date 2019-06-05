@@ -25,13 +25,21 @@ You will need to do a "dtr reconfigure" to apply globally these changes.
 
 Usage:
   dtr-global-change [flags]
+  dtr-global-change [command]
+
+Available Commands:
+  getReplicas   Command to retrieve all replicas
+  help          Help about any command
+  removeReplica Command to remove a replica from DTR internal configuration
 
 Flags:
   -h, --help                     help for dtr-global-change
       --http-port int            Http port that will use all replicas
       --https-port int           Https port that will use all replicas
-      --replica-id string        Replica-id to connect (default "4d1e2c7382c5")
+      --replica-id string        Replica-id to connect
       --rethinkdb-cache-mb int   Max rethinkdb memory cache that will use all replicas | 0 = auto (default -1)
+
+Use "dtr-global-change [command] --help" for more information about a command.
 ```
 
 ## To compile
